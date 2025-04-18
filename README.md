@@ -1,2 +1,2 @@
 # Gnuplot-Fortran
-Use subroutines to call gnuplot from Fortran in a single line
+Use subroutines to call gnuplot to make plots from Fortran in a single line
