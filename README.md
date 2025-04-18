@@ -1,5 +1,6 @@
 # Gnuplot-Fortran
-Use subroutines to call gnuplot to make plots from Fortran in a single line of code, for example
+
+Subroutines to call gnuplot to make plots from Fortran in a single line of code, for example
 
 ```fortran
 program test_plot
