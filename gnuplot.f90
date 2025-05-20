@@ -19,8 +19,6 @@ contains
 
   subroutine plot_1d(x, y, title, xlabel, ylabel, style, data_file, script_file)
     ! Plot a single series y(:) versus x(:)
-    use kind_mod, only: dp
-    implicit none
     real(kind=dp), intent(in)               :: x(:), y(:)
     character(len=*), intent(in), optional   :: title, xlabel, ylabel, style
     character(len=*), intent(in), optional   :: data_file, script_file
@@ -88,8 +86,6 @@ contains
 
   subroutine plot_2d(x, y, title, xlabel, ylabel, style, data_file, script_file)
     ! Plot multiple series (columns of y(:,j)) versus x(:)
-    use kind_mod, only: dp
-    implicit none
     real(kind=dp), intent(in)               :: x(:), y(:, :)
     character(len=*), intent(in), optional   :: title, xlabel, ylabel, style
     character(len=*), intent(in), optional   :: data_file, script_file
