@@ -121,10 +121,10 @@ contains
     end if
 
     !── write data
-    open(newunit=unit_data, file=fn_data,   status="replace", action="write")
+    open(newunit=unit_data, file=fn_data, status="replace", action="write")
       do i = 1, n
         write(unit_data, fmt1, advance="no") x(i)
-        write(unit_data, fmty             ) y(i,1:ns)
+        write(unit_data, fmty              ) y(i,1:ns)
       end do
     close(unit_data)
 
