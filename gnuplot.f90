@@ -59,16 +59,16 @@ contains
     !── write gnuplot script
     open(newunit=unit_script, file=fn_script, status="replace", action="write")
       if (present(title)) then
-        write(unit_script,"(A)") "set title '"//trim(title)//"'"
+        write(unit_script,"(A)") "set title '" // trim(title) // "'"
       end if
       if (present(xlabel)) then
-        write(unit_script,"(A)") "set xlabel '"//trim(xlabel)//"'"
+        write(unit_script,"(A)") "set xlabel '" // trim(xlabel) // "'"
       end if
       if (present(ylabel)) then
-        write(unit_script,"(A)") "set ylabel '"//trim(ylabel)//"'"
+        write(unit_script,"(A)") "set ylabel '" // trim(ylabel) // "'"
       end if
       write(unit_script,"(A)") "set grid"
-      write(unit_script,"(A)") "plot '"//trim(fn_data)//"' using 1:2 with "//trim(st)
+      write(unit_script,"(A)") "plot '" // trim(fn_data) // "' using 1:2 with " // trim(st)
       write(unit_script,"(A)") "pause -1"
     close(unit_script)
 
@@ -130,19 +130,20 @@ contains
     !── write gnuplot script
     open(newunit=unit_script, file=fn_script, status="replace", action="write")
       if (present(title)) then
-        write(unit_script,"(A)") "set title '"//trim(title)//"'"
+        write(unit_script,"(A)") "set title '" // trim(title) // "'"
       end if
       if (present(xlabel)) then
-        write(unit_script,"(A)") "set xlabel '"//trim(xlabel)//"'"
+        write(unit_script,"(A)") "set xlabel '" // trim(xlabel) // "'"
       end if
       if (present(ylabel)) then
-        write(unit_script,"(A)") "set ylabel '"//trim(ylabel)//"'"
+        write(unit_script,"(A)") "set ylabel '" // trim(ylabel) // "'"
       end if
       write(unit_script,"(A)") "set grid"
 
       write(col_max,"(I0)") ns + 1
       write(unit_script,"(A)") &
-           "plot for [col=2:"//trim(col_max)//"] '"//trim(fn_data)//"' using 1:col with "//trim(st)
+           "plot for [col=2:" // trim(col_max) // "] '" // trim(fn_data) &
+            // "' using 1:col with " // trim(st)
       write(unit_script,"(A)") "pause -1"
     close(unit_script)
 
