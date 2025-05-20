@@ -68,7 +68,8 @@ contains
         write(unit_script,"(A)") "set ylabel '" // trim(ylabel) // "'"
       end if
       write(unit_script,"(A)") "set grid"
-      write(unit_script,"(A)") "plot '" // trim(fn_data) // "' using 1:2 with " // trim(st)
+      write(unit_script,"(A)") "plot '" // trim(fn_data) // &
+                               "' using 1:2 with " // trim(st) // " notitle"
       write(unit_script,"(A)") "pause -1"
     close(unit_script)
 
@@ -143,7 +144,7 @@ contains
       write(col_max,"(I0)") ns + 1
       write(unit_script,"(A)") &
            "plot for [col=2:" // trim(col_max) // "] '" // trim(fn_data) &
-            // "' using 1:col with " // trim(st)
+            // "' using 1:col with " // trim(st) // " notitle"
       write(unit_script,"(A)") "pause -1"
     close(unit_script)
 
