@@ -50,7 +50,7 @@ contains
     end if
 
     !── write data
-    open(newunit=unit_data, file=fn_data,   status="replace", action="write")
+    open(newunit=unit_data, file=fn_data, status="replace", action="write")
       do i = 1, n
         write(unit_data, fmt) x(i), y(i)
       end do
